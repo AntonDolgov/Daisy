@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+<!-- 	<script src="js/jquery.1.7.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			$("header").removeClass("default");
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 20) {
+					$("header").addClass("default").fadeIn('fast');
+				} else {
+					$("header").removeClass("default").fadeIn('fast');
+				};
+			});
+		});
+	</script> -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+
+  	var header = document.querySelector('header');
+  	window.onscroll = function() {
+  		if(header.classList.contains('default') && window.pageYOffset < 20) {
+  			header.classList.remove('default');
+  		} else if (window.pageYOffset > 20) {
+  			header.classList.add('default');
+  		}
+  	};
+
+  	var slider = document.getElementsByClassName('slider');
+  	for(var i = 0; i < slider.length; i++) {
+  		slider[i].onclick = function() {
+  			setTimeout(function() { 
+  				window.scrollBy(0, -80);
+  			}, 0);
+  		}
+  	}
+  });
+  </script>
+</head>
+<body>
+	<div class="wrapper">
+	<!-- Шапка сайта  -->
+		<header>
+			<div class="container clearfix">
+				<div class="logo left">
+					<a href="/">d</a>
+					<span>Daisy</span>
+				</div>
+				<nav class="navigation right">
+					<a href="#">about</a>
+					<a class="active" href="#">portfolio</a>
+					<a href="#">services</a>
+					<a href="#">contact</a>
+				</nav>
+			</div>
+		</header>
+		<section class="home-page">
+				<div class="main container">
+					<h1><span>Clients</span> in your business</h1>
+					<h3>Your clients on the internet. Learn how to receive them.</h3>
+					<button class="btn">I want clients</button>
+					<div class="img-button">
+						<img src="img/mouse.png" alt="" class="btn-image">
+					</div>
+				</div>
+				<a href="#services" class="slider"></a>
+		</section>
+	<!-- Раздел услуг -->
+		<section id="services" class="clearfix">
+			<div class="container">
+				<h2>What can <span>you receive?</span></h2>
+				<p>Daisy is sagittis sem nibh id elit. Duis sed odio sit amet nibh<br>vulputate cursus a sit amet mauris. Morbi accumsan ipsum</p>
+			</div>
+			<article>
+				<div class="figure"><div class="inner-figure"><img src="img/Forma-1.png" alt=""></div></div>
+				<h3>CLIENTS</h3>
+				<p>This is Photoshop's version  of<br>Lorem Ipsum. Proin gravida nibh<br>vel velit auctor aliquet. Aenean</p>
+			</article>
+			<article>
+				<div class="active figure"><div class="active inner-figure"><img src="img/Forma-2.png" alt="">
+			</div></div>
+			<h3>branding</h3>
+			<p>This is Photoshop's version  of<br>Lorem Ipsum. Proin gravida nibh<br>vel velit auctor aliquet. Aenean</p>
+			</article>
+			<article>
+				<div class="figure"><div class="inner-figure"><img src="img/Forma-3.png" alt=""></div></div>
+				<h3>marketing</h3>
+				<p>This is Photoshop's version  of<br>Lorem Ipsum. Proin gravida nibh<br>vel velit auctor aliquet. Aenean</p>
+			</article>
+			<article>
+				<div class="figure"><div class="inner-figure"><img src="img/Forma-4.png" alt=""></div></div>
+				<h3>adv.</h3>
+				<p>This is Photoshop's version  of<br>Lorem Ipsum. Proin gravida nibh<br>vel velit auctor aliquet. Aenean</p>
+			</article>
+			<a href="#invitation" class="slider"></a>
+		</section>
+		<section id="invitation">
+		<!-- Раздел приглашения -->
+			<div class="container">
+				<h1><span>Expand</span> your business</h1>
+				<button class="btn">Join Us</button>
+			</div>
+			<a href="#advertising" class="slider"></a>
+		</section>
+		<!-- Раздел рекламы -->
+		<section id="advertising" class="clearfix">
+			<div class="container">
+				<div class="advertising-img left">
+					<img src="img/macbook.png" alt="">	
+				</div>
+				<div class="advertising-aside right clearfix">
+					<h2>advertising</h2>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+					<button class="open-btn right">More details</button>
+				</div>
+			</div>
+			<a href="#marketing" class="slider"></a>
+		</section>
+		<!-- Раздел маркетинга -->
+		<section id="marketing" class="clearfix">
+			<div class="container">
+				<div class="marketing-img right">
+					<img src="img/marketing.png" alt="">	
+				</div>
+				<div class="marketing-aside left clearfix">
+					<h2>marketing kit</h2>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+					<button class="open-btn left">More details</button>
+				</div>
+			</div>
+			<a href="#portfolio" class="slider"></a>
+		</section>
+		<!-- Портфолио -->
+		<section id="portfolio" class="clearfix">
+			<div class="container">
+				<h2>portfolio</h2>
+				<div class="p-nav">
+					<a href="#">all</a> 
+					<span>&frasl;</span>
+					<a href="#">entertainment</a>
+					<span>&frasl;</span>
+					<a href="#">sport</a> 
+					<span>&frasl;</span>
+					<a href="#">business</a>
+					<span>&frasl;</span>
+					<a href="#">building</a>
+				</div>
+				<div class="portfolio-img">
+					<div class="p-img big active"><img src="img/img-1.jpg" alt=""></div>
+					<div class="p-img"><img src="img/img-2.jpg" alt=""></div>
+					<div class="p-img"><img src="img/img-3.jpg" alt=""></div>
+					<div class="p-img"><img src="img/img-4.jpg" alt=""></div>
+					<div class="p-img"><img src="img/img-5.jpg" alt=""></div>
+					<div class="p-img big"><img src="img/img-6.jpg" alt=""></div>
+				</div>
+				<button class="open-btn">I want landing page</button>
+			</div>
+			<a href="#ourTeam" class="slider"></a>
+		</section>
+		<!-- Наша команда -->
+		<section id="ourTeam" class="clearfix">
+			<div class="container">
+				<h2>our <span>team</span></h2>
+				<div class="ourTeam">
+					<div class="person">
+						<img src="img/person-1.png" alt="">
+						<h3><span>Tomothy</span> Bowman</h3>
+						<p>Marketing</p>
+						<div class="p-social">
+							<a href="#" class="tw">&nbsp;</a>
+							<a href="#" class="fb">&nbsp;</a>
+							<a href="#" class="in">&nbsp;</a>
+						</div>
+					</div>
+					<div class="person">
+						<img src="img/person-2.png" alt="">
+						<h3><span>Steve</span> Tracy</h3>
+						<p>CEO</p>
+						<div class="p-social">
+							<a href="#" class="tw">&nbsp;</a>
+							<a href="#" class="fb">&nbsp;</a>
+							<a href="#" class="in">&nbsp;</a>
+						</div>
+					</div>
+					<div class="person">
+						<img src="img/person-3.png" alt="">
+						<h3><span>Hellen</span> Johns </h3>
+						<p>Clients</p>
+						<div class="p-social">
+							<a href="#" class="tw">&nbsp;</a>
+							<a href="#" class="fb">&nbsp;</a>
+							<a href="#" class="in">&nbsp;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#almostFooter" class="slider"></a>
+		</section>
+		<!-- Предфутер -->
+		<section id="almostFooter" class="clearfix">
+			<div class="container">
+				<div class="quote">
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin<br>gravida nibh vel velit auctor aliquet. Aenean<br>sollicitudin, lorem quis bibendum auctor, nisi elit </p>
+					<div class="q-person"><img src="img/person-4.png" alt=""></div>
+					<div class="q-person-name">
+						<h3><span>Alan</span> Richman </h3>
+						<p>CEO of Romashka</p>
+					</div>
+				</div>
+				<div class="buttons">
+					<button class="btn-left"></button>
+					<button class="btn-right"></button>
+				</div>
+				</div>
+		</section>
+	</div>
+	<footer>
+		<div class="contacts">
+			<div class="figure">
+				<div class="inner-figure">
+					<h4>Daisy</h4>
+					<p>615 4th Ave S, Jacksonville Beach, FL 32250</p>
+				</div>
+			</div>	
+		</div>
+		<div class="footer-bottom">
+			<div class="logo">
+				<a href="/">d</a>
+				<span>Daisy</span>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
